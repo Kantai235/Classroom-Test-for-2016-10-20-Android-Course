@@ -6,7 +6,7 @@
 ###### (4) 教學影片讀取 Local 端的影片。
 ###### (5) 跳到 ImageView 的頁面，會 Show 出 About Me 的相關資訊。
 
-![題目要求](/images/topic.png "題目要求")
+![題目要求](/images/topic.jpg "題目要求")
 
 ### ！注意！
 本專案是使用 [Android-Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap "Android-Bootstrap") 完成的，可以去參考一下 ( 不過本專案有不少東西都是套用這框架 )。
@@ -31,18 +31,18 @@ android:onClick="mainClick"
 
 ```Java
 public void mainClick(View view) {
-Intent intent = new Intent();
-switch (view.getId()) {
-case R.id.mainImageButton:
-intent.setClass(this, dockerView.class);
-break;
+    Intent intent = new Intent();
+    switch (view.getId()) {
+        case R.id.mainImageButton:
+            intent.setClass(this, dockerView.class);
+            break;
 
-case R.id.mainImageView:
-intent.setClass(this, aboutMeView.class);
-break;
-}
-startActivity(intent);
-finish();
+        case R.id.mainImageView:
+            intent.setClass(this, aboutMeView.class);
+            break;
+    }
+    startActivity(intent);
+    finish();
 }
 ```
 
